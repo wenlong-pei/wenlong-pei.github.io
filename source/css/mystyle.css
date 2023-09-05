@@ -49,8 +49,8 @@ body {
     backdrop-filter: blur(11px);
     box-shadow: 0 8px 39px 0 rgba(0, 0, 0, 0.37);
     margin-top: 12%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 #card{
@@ -78,7 +78,7 @@ body {
     cursor: pointer;
     overflow: hidden;
     transition: 0.3s;
-    width: 30%;
+    width: 50%;
     height: 0px;
 }
 
@@ -101,7 +101,7 @@ body {
     cursor: pointer;
     overflow: hidden;
     transition: 0.3s;
-    width: 30%;
+    width: 50%;
     height: 100px;
     margin: 1%;
 }
@@ -135,7 +135,7 @@ body {
 }
 
 #index_card:hover .button_1{
-    width: 27%!important;
+    width: 40%!important;
     height:80px!important;
 }
 
@@ -233,7 +233,7 @@ footer {
         margin-right: 5%!important;
     }
     .button_1{
-        width: 27%!important;
+        width: 40%!important;
         height:80px!important;
     }
     .project_card{
@@ -241,11 +241,20 @@ footer {
     }
     .p_card_t{
         margin-top: -10px!important;
-        margin-left: 3%;
+        /* margin-left: 3%; */
     }
-    
+	.p_status_text{
+		padding:3%;
+	}
+	.p_all_text{
+		padding-top: 3%;
+		padding-left: 3%;
+		margin-top: 0;
+	}
+   
     .p_card_text{
         padding: 3%;
+		padding-top: 0;
         float: left;
     }
     .p_card_tag{
