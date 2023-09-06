@@ -223,7 +223,19 @@ progress{
     height: 36px;
     transition: 0.3s;
 }
-
+.about_card{
+	overflow: hidden;
+	/* overflow: scroll; */
+	background: rgba( 255, 255, 255, 0.2 );
+	box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
+	backdrop-filter: blur( 11px );
+	-webkit-backdrop-filter: blur( 11px );
+	border-radius: 15px;
+	height: 36px;
+	transition: 0.3s;
+	padding:2%;
+	margin:6%;
+}
 footer {
     transition: 0.3s;
     position: absolute;
