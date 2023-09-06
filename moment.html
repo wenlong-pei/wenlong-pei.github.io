@@ -1,54 +1,75 @@
 <!DOCTYPE html>
-<html  oncontextmenu=self.event.returnValue=false onselectstart="return false">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="source/css/links.css">
-    <script type="text/javascript" src="source/js/header.js"></script>
-    <title>便笺 - TuHome</title>
-</head>
-<body>
-    <noscript> <iframe src="*.htm"></iframe> </noscript>
-    <SCRIPT language=JavaScript>
-        document.oncontextmenu = nocontextmenu;
-        document.onmousedown = norightclick;
-        document.ondragstart = noDragstart;
-        document.onselectstart = noSelect;
-        document.onselect = document.selection.empty();
-        document.onkeydown = keyDown;
-    </SCRIPT>
-    <div class="change" id="card">
-        <a style="padding:2%;" href="/"><img class="change" id="favorite" style="float:left;width:80px;margin-top:-15px;margin-left:-15px;" src="source/img/picture.jpg"></a>
-        <div style="padding:1%;float:left;"><b style="font-size:150%;">Moment<br></b></div>
-        
-        <br><br><br>
-        <div style="padding:3%;">
+<html oncontextmenu=self.event.returnValue=false onselectstart="return false">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="source/css/links.css">
+		<script type="text/javascript" src="source/js/header.js"></script>
+		<title>Moment</title>
+	</head>
+	<body>
+		<noscript> <iframe src="*.htm"></iframe> </noscript>
+		<SCRIPT language=JavaScript>
+			document.oncontextmenu = nocontextmenu;
+			document.onmousedown = norightclick;
+			document.ondragstart = noDragstart;
+			document.onselectstart = noSelect;
+			document.onselect = document.selection.empty();
+			document.onkeydown = keyDown;
+		</SCRIPT>
 
-            
-            <h2 style="color: darkblue;font-size:25px;">·&nbsp;西安</h2>
-            <div class="notes_card">
-                <div class="card-img" style="background-image: url(source/img/picture.jpg);"></div>
-            </div>
-            <div class="notes_card">
-                <div class="card-img" style="background-image: url(source/img/picture.jpg);"></div>
-            </div><br><br>
+		<div class="change" id="card">
+			<a style="padding:2%;" href="/"><img class="change" id="favorite" style="float:left;width:80px;margin-top:-15px;margin-left:-15px;"
+				 src="source/img/picture.jpg"></a>
+			<div style="padding:1%;float:left;"><b style="font-size:150%;">Moment<br></b></div>
+
+			<br><br><br>
+			<div style="padding:3%;">
 
 
-            <h2 style="color: darkblue;font-size:25px;">·&nbsp;南京</h2>
-            <div class="notes_card">
-                <div class="card-img" style="background-image: url(source/img/picture.jpg);"></div>
-            </div>
-            <div class="notes_card">
-                <div class="card-img" style="background-image: url(source/img/picture.jpg);"></div>
-            </div><br><br>
-        </div>
-        <a style="padding:2%;" href="/"><i class="iconfont iconicon-arrow-left2">返回</i></a>
-        <br>
-        <br>
-    </div>
-    <footer id="footer">
-        <script type="text/javascript" src="source/js/footer.js"></script>
-    </footer>
+				<h2 style="color: darkblue;font-size:25px;">·&nbsp;西安</h2>
+				<div class="notes_card">
+					<div class="card-img" style="background-image: url(source/img/picture.jpg);" onclick="showLargeImage('source/img/picture.jpg')"></div>
+				</div>
+				<div class="notes_card">
+					<div class="card-img" style="background-image: url(source/img/favorite.jpg);" onclick="showLargeImage('source/img/favorite.jpg')"></div>
+				</div><br><br>
 
-</body>
+
+				<h2 style="color: darkblue;font-size:25px;">·&nbsp;南京</h2>
+				<div class="notes_card">
+					<div class="card-img" style="background-image: url(source/img/picture.jpg);" onclick="showLargeImage('source/img/picture.jpg')"></div>
+				</div>
+				<div class="notes_card">
+					<div class="card-img" style="background-image: url(source/img/picture.jpg);" onclick="showLargeImage('source/img/picture.jpg')"></div>
+				</div><br><br>
+			</div>
+			<a style="padding:2%;" href="/"><i class="iconfont iconicon-arrow-left2">返回</i></a>
+			<br>
+			<br>
+
+		</div>
+		<div id="largeImageContainer">
+			<img id="largeImage" src="" />
+		</div>
+		<footer id="footer">
+			<script type="text/javascript" src="source/js/footer.js"></script>
+		</footer>
+		<script>
+			function showLargeImage(imageSrc) {
+				var largeImageContainer = document.getElementById("largeImageContainer");
+				var largeImage = document.getElementById("largeImage");
+				largeImage.src = imageSrc;
+				largeImageContainer.style.display = "block";
+				document.body.style.overflow = "hidden";
+			}
+			document.getElementById("largeImageContainer").onclick = function(event) {
+				this.style.display = "none";
+				document.body.style.overflow = "auto";
+			};
+			document.getElementById("largeImage").onclick = function(event) {
+				event.stopPropagation();
+			};
+		</script>
+	</body>
 </html>
