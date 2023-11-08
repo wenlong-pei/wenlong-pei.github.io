@@ -231,9 +231,10 @@ progress{
 	backdrop-filter: blur( 11px );
 	-webkit-backdrop-filter: blur( 11px );
 	border-radius: 15px;
-	height: 36px;
+	height: 300px;
 	transition: 0.3s;
 	padding:2%;
+	word-wrap: break-word;
 	margin:6%;
 }
 footer {
